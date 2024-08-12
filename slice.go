@@ -32,6 +32,15 @@ func InStringSlice(slice []string, value string) bool {
 	return false
 }
 
+func InIntSlice(slice []int, value int) bool {
+	for _, s := range slice {
+		if s == value {
+			return true
+		}
+	}
+	return false
+}
+
 func ToUpperStringSlice(slice []string) []string {
 	var goal []string
 	for _, s := range slice {
