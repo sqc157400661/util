@@ -7,7 +7,7 @@ import (
 
 func TestEncrypt(t *testing.T) {
 	a := NewEncryptor()
-	aa := "sqctest"
+	aa := "tadmin123#442"
 	fmt.Println(a.Encrypt(aa))
 
 	bb := "T15+2TXdFynaKaRXGrk8vA=="
