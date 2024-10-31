@@ -5,6 +5,8 @@ go 1.19
 require (
 	github.com/pkg/errors v0.9.1
 	github.com/stretchr/testify v1.7.1
+	k8s.io/apimachinery v0.25.0
+    sigs.k8s.io/controller-runtime v0.13.1
 )
 
 require (
