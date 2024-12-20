@@ -8,12 +8,12 @@ import (
 	"k8s.io/apimachinery/pkg/util/rand"
 )
 
-func UnsafeMergeMap(tgt map[string]interface{}, src map[string]interface{}) map[string]interface{} {
+func UnsafeMergeMap[K comparable, V any](tgt map[K]V, src map[K]V) map[K]V {
 	if len(src) == 0 {
 		return tgt
 	}
 	if tgt == nil {
-		tgt = map[string]interface{}{}
+		tgt = make(map[K]V)
 	}
 	for k, v := range src {
 		if _, has := tgt[k]; !has {
